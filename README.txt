@@ -1,6 +1,20 @@
-## BUILD
-
+## Build
+```
 docker build -t myimage .
+```
 
-## RUN
+## Run
+```
+docker run --name myimage --restart unless-stopped myimage
+```
+
+## Run in background
+```
 docker run --name myimage --restart unless-stopped -d myimage
+```
+
+## Kill & remove leftovers
+```
+docker kill myimage
+docker rm myimage
+```
