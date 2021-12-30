@@ -33,7 +33,8 @@ def check_status():
       if component["status"] != "operational":
         report_poblem(component["name"], component["status"])
 
-while True:
-  check_status()
-  print("---------------------------------------------")
-  time.sleep(10)
+if __name__ == '__main__':
+  while True:
+    check_status()
+    print("---------------------------------------------")
+    time.sleep(10)
