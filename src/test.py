@@ -4,7 +4,10 @@ from check import check_status
 class TestGithubCheck(unittest.TestCase):
 
   def test_check(self):
-    self.assertRaises(Exception, check_status)
+    try:
+      check_status()
+    except:
+      self.fail("Exception in check_status")
 
 if __name__ == '__main__':
     unittest.main()
